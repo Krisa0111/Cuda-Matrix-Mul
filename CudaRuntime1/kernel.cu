@@ -26,8 +26,8 @@ int main() {
     float* h_C = (float*)malloc(size);
 
     for (int i = 0; i < n * n; i++) {
-        h_A[i] = rand() / (float)RAND_MAX;
-        h_B[i] = rand() / (float)RAND_MAX;
+        h_A[i] = rand() % 10 + 1 /*/ (float)RAND_MAX*/;
+        h_B[i] = rand() % 10 + 1/*/ (float)RAND_MAX*/;
     }
 
     float* d_A, * d_B, * d_C;
